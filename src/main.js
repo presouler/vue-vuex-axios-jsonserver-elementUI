@@ -2,8 +2,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import userServers from './servers/UserServers';
 
 Vue.config.productionTip = false;
+Vue.prototype.$UserServers = userServers;
 
 new Vue({
   router,

@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import UserServers from '../servers/UserServers';
 import UserList from '../components/UserList.vue';
 
 export default {
@@ -22,8 +21,7 @@ export default {
     };
   },
   created() {
-    UserServers.getUsers()
-      .then((res) => { this.users = res.data; });
+    this.$UserServers.getUsers().then((res) => { this.users = res.data; });
   },
 };
 </script>
